@@ -5,14 +5,14 @@ import {Spinner} from 'react-bootstrap'
 const Loader = () => {
   return (
     <div className= 'd-flex justify-content-center mt-5' style= {{width: '100vw'}}>
-        <figure class='text-center'>
-        <blockquote class='blockquote'>
+        <figure className='text-center'>
+        <blockquote className='blockquote'>
             <p className= 'fs-2'>Fetching Pokemon...</p>
         </blockquote>
                 <Spinner className='spinner-border spinner-border-lg text-primary' role= 'status' style= {{height: '10vh', width: '10vh'}}>
                 </Spinner>
-        <figcaption class='blockquote-footer mt-3'>
-            Give it a moment please
+        <figcaption className='mt-3 text-secondary'>
+            <small>Give it a moment please</small>
         </figcaption>
         </figure>
     </div>
