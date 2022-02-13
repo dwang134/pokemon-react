@@ -44,7 +44,7 @@ const PokemonPage = () => {
               <Card.Img style=  {{width: '15rem'}} src= {pokemonDetails.sprites.other["official-artwork"].front_default} variant= 'top'/>
               </Link>
               <Card.Body className= {`${pokemonDetails.types[0].type.name} rounded text-white`} />
-              <Link to= {`/pokemon/${pokemonDetails.id}`} className= 'link-name'>
+              <Link to= {`/pokemon/${pokemonDetails.id}`} className= 'link-name text-dark fs-2'  style= {{textDecoration: 'none'}}>
                 <Card.Title as= 'div'>
                   <strong>
                     #{pokemonDetails.id} {pokemonDetails.name.charAt(0).toUpperCase() + pokemonDetails.name.slice(1)}
