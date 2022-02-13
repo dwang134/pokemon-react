@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import {Card, Row, Col} from 'react-bootstrap'
+import {Card, Row, Col, Navbar} from 'react-bootstrap'
 import {Link, useParams} from 'react-router-dom'
 
 import Loader from '../components/Loader'
@@ -76,6 +76,22 @@ const PokemonPage = () => {
                   <Card.Text>Shiny Form</Card.Text>
                   </Col>
                 </Row>
+                <Row className= 'mt-4'>
+                <Col xs= {12} sm= {12} md= {12} lg= {12} xl = {12}>
+                <Navbar style= {{border: '2px solid black'}} expand="xl" variant="light" bg="light" className= 'rounded justify-content-center'>
+                  <Navbar.Brand> Abilities</Navbar.Brand> 
+                  </Navbar>
+                </Col>
+                </Row>
+                <Row className='text-center mt-4'>
+                  {pokemonDetails.abilities.map(a => (
+                      <Col key={a.ability.name} xs={6} sm={6} md={6} lg={6} xl={6}>
+                          <div className={`rounded px-4 py-1`}>
+                              {a.ability.name.toUpperCase()}
+                          </div>
+                      </Col>
+                  ))}
+              </Row>
               </Card.Text>
             </Card.Body>
             </Card>
