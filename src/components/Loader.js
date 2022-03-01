@@ -1,10 +1,10 @@
 import React from 'react'
-import {Spinner} from 'react-bootstrap'
+import {Spinner, Container} from 'react-bootstrap'
 
 
 const Loader = () => {
   return (
-    <div className= 'd-flex justify-content-center mt-5' style= {{width: '100vw'}}>
+    <Container fluid className= 'd-flex justify-content-center align-items-center mt-5' >
         <figure className='text-center'>
         <blockquote className='blockquote'>
             <p className= 'fs-2'>Fetching Pokemon...</p>
@@ -15,7 +15,7 @@ const Loader = () => {
             <small>Give it a moment please</small>
         </figcaption>
         </figure>
-    </div>
+    </Container>
   )
 }
 

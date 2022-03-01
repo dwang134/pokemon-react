@@ -16,7 +16,7 @@ const Homepage = () => {
     const getPokemonList = async () => {
         let pokemonArray= [];
         //because pokemon id starts at 1 and get 151 pokemons
-        for (let i= 1; i<= 151; i++){
+        for (let i= 1; i<= 898; i++){
             //dont alter original array directly
             pokemonArray.push(await getPokemonData(i));
         }
