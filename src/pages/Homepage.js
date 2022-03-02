@@ -4,6 +4,7 @@ import {Row, Col} from 'react-bootstrap'
 //Components
 import Pokemon from '../components/Pokemon'
 import Loader from '../components/Loader'
+import HeroSection from '../components/HeroSection'
 
 const Homepage = () => {
 
@@ -15,6 +16,7 @@ const Homepage = () => {
     //push data into pokemon array
     const getPokemonList = async () => {
         let pokemonArray= [];
+
         //because pokemon id starts at 1 and get 151 pokemons
         for (let i= 1; i<= 898; i++){
             //dont alter original array directly
@@ -41,11 +43,13 @@ const Homepage = () => {
 
 
   return (
-    <>
-        {loading? (
+
+       loading? (
             //loading icon
             <Loader/>
         ): (
+            <>
+            <HeroSection pokemon= {pokemon} setPokemon= {setPokemon}/>
             <Row>
                 {/* map through pokemon */}
                 {pokemon.map(p => (
@@ -54,9 +58,9 @@ const Homepage = () => {
                     </Col>
                 ))}
             </Row>
+            </>
         )
-        }
-    </>
+        
   )
 }
 

@@ -13,8 +13,8 @@ const App= ()=> {
     <Header/>
       <Container>
       <Routes>
-          <Route exact path= "/" element= {<Homepage/>}/>
-          <Route path= '/pokemon/:id' element= {<PokemonPage/>}/>
+          <Route exact path= "/pokemon-react" element= {<Homepage/>}/>
+          <Route path= '/pokemon-react/pokemon/:id' element= {<PokemonPage/>}/>
       </Routes>
       </Container>
     </BrowserRouter>
